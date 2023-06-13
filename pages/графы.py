@@ -50,13 +50,13 @@ def convert_graph_to_streamlit_format(G):
 
     for node in G.nodes:
         # Add nodes to the list
-        centrality_info = f"Степень влияния: {degree_centrality[node]:.2f}\n" \
-                          f"Взаимосвязь: {betweenness_centrality[node]:.2f}\n" \
-                          f"Близость: {closeness_centrality[node]:.2f}\n"\
-                          f"индекс центральности: {nx.eigenvector_centrality(G)[node]:.2f}\n"
+        # centrality_info = f"Степень влияния: {degree_centrality[node]:.2f}\n" \
+        #                   f"Взаимосвязь: {betweenness_centrality[node]:.2f}\n" \
+        #                   f"Близость: {closeness_centrality[node]:.2f}\n"\
+        #                   f"индекс центральности: {nx.eigenvector_centrality(G)[node]:.2f}\n"
 
         nodes.append(Node(id=node, label=node, size=25, shape="circularImage", image="your_image_url_here",
-                          title=centrality_info))
+                          title="Граф связей"))
 
     for edge in G.edges:
         source, target = edge
