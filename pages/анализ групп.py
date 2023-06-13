@@ -168,7 +168,7 @@ def main():
                     continue
 
             data_df['cсылка'] = 'https://vk.com/id' + data_df['id'].astype(str)
-            data_df = data_df[['cсылка', 'имя', 'фамилия', 'год', 'пол', 'город', 'возраст-группа', 'название группы', 'id']]
+            data_df = data_df[['cсылка', 'год', 'пол', 'город', 'возраст-группа', 'название группы', 'id']]
             #start index from 1
             data_df.index = np.arange(1, len(data_df) + 1)
             st.write(data_df)
