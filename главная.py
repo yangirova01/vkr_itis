@@ -119,7 +119,7 @@ def main():
             sentiment_df = sentiment_df.applymap(lambda x: '{:.2f}%'.format(x * 100)) # convert to percentage
             posts_data = pd.concat([posts_data, sentiment_df], axis=1) # add to original df
 
-            st.write("Таблица с данными")
+            st.write("Таблица с постами")
             posts_data.index = posts_data.index + 1
             posts_data = posts_data[
                 ['text', 'likes', 'reposts', 'views', 'comments', 'positive',
