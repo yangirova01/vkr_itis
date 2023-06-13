@@ -6,12 +6,12 @@ from streamlit_agraph import agraph, Node, Edge, Config
 
 # Sidebar configuration
 # st.sidebar.header("Graph Configuration")
-# st.sidebar.subheader("Настройки графа")
-# width = st.sidebar.slider("Ширина", 500, 1200, 950)
-# height = st.sidebar.slider("Высота", 500, 1200, 700)
-# directed = st.sidebar.checkbox("Направленность граф", True)
-# physics = st.sidebar.checkbox("Физика", True)
-# hierarchical = st.sidebar.checkbox("Иерархический", False)
+st.sidebar.subheader("Настройки графа")
+width = st.sidebar.slider("Ширина", 500, 1200, 950)
+height = st.sidebar.slider("Высота", 500, 1200, 700)
+directed = st.sidebar.checkbox("Направленность граф", True)
+physics = st.sidebar.checkbox("Физика", True)
+hierarchical = st.sidebar.checkbox("Иерархический", False)
 load_file = st.sidebar.file_uploader("Загрузить файл", type=["csv"])
 load_data_button = st.sidebar.button('Загрузить данные')
 df = pd.DataFrame()
@@ -74,21 +74,15 @@ if not df.empty:
 
     st.write(centrality_info)
 
-    # config = Config(
-    #     width=width,
-    #     height=height,
-    #     directed=directed,
-    #     physics=physics,
-    #     hierarchical=hierarchical
-    # )
-
-    # config = Config(
-    #     directed=directed,
-    #     physics=physics,
-    # )
+    config = Config(
+        width=width,
+        height=height,
+        directed=directed,
+        physics=physics,
+        hierarchical=hierarchical
+    )
 
     # Create the agraph using streamlit-agraph
-    # return_value = agraph(nodes=nodes, edges=edges, config=config)
-    return_value = agraph(nodes=nodes, edges=edges, config={'directed': False, 'physics': True})
+    return_value = agraph(nodes=nodes, edges=edges, config=config)
 else:
     st.warning('Данные не загружены. Загрузите файл CSV.')
