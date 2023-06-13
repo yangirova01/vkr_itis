@@ -186,7 +186,7 @@ def main():
             hidden_profiles_df.columns = ['cсылка', 'название группы']
 
 
-            st.write(hidden_profiles_df)
+            st.write(hidden_profiles_df[['cсылка']])
 
 
 
