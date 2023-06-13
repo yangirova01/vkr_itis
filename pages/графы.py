@@ -11,7 +11,7 @@ width = st.sidebar.slider("Ширина", 500, 1200, 950)
 height = st.sidebar.slider("Высота", 500, 1200, 700)
 directed = st.sidebar.checkbox("Направленность граф", True)
 physics = st.sidebar.checkbox("динамичность", True)
-hierarchical = st.sidebar.checkbox("Иерархический", False)
+# hierarchical = st.sidebar.checkbox("Иерархический", False)
 load_file = st.sidebar.file_uploader("Загрузить файл", type=["csv"])
 load_data_button = st.sidebar.button('Загрузить данные')
 df = pd.DataFrame()
@@ -79,7 +79,7 @@ if not df.empty:
         height=height,
         directed=directed,
         physics=True,
-        hierarchical=hierarchical
+        hierarchical=False,
     )
 
     # Create the agraph using streamlit-agraph
