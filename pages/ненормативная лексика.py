@@ -164,7 +164,7 @@ score = round(score, 2)
 st.write(score, "%")
 
 #сохранение в файл матов side bar
-if st.sidebar.button('Сохранить в файл неноцензурную лексику'):
+if st.sidebar.button('Сохранить в файл ненормативную лексику'):
     with open('bad_words.txt', 'w') as f:
         for item in bad_words:
             f.write("%s\n" % item)
