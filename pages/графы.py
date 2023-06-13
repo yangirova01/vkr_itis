@@ -74,12 +74,19 @@ if not df.empty:
 
     st.write(centrality_info)
 
+    # config = Config(
+    #     width=width,
+    #     height=height,
+    #     directed=directed,
+    #     physics=physics,
+    #     hierarchical=hierarchical
+    # )
+
     config = Config(
         width=width,
         height=height,
         directed=directed,
         physics=physics,
-        hierarchical=hierarchical
     )
 
     # Create the agraph using streamlit-agraph
