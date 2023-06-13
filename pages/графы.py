@@ -72,7 +72,7 @@ if not df.empty:
     # Convert the graph to the format compatible with streamlit-agraph
     nodes, edges, centrality_info= convert_graph_to_streamlit_format(graph)
 
-    st.write(centrality_info)
+    # st.write(centrality_info)
 
     config = Config(
         width=width,
