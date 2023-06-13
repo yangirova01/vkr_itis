@@ -6,11 +6,11 @@ from streamlit_agraph import agraph, Node, Edge, Config
 
 # Sidebar configuration
 # st.sidebar.header("Graph Configuration")
-st.sidebar.subheader("Настройки графа")
-width = st.sidebar.slider("Ширина", 500, 1200, 950)
-height = st.sidebar.slider("Высота", 500, 1200, 700)
+# st.sidebar.subheader("Настройки графа")
+# width = st.sidebar.slider("Ширина", 500, 1200, 950)
+# height = st.sidebar.slider("Высота", 500, 1200, 700)
 # directed = st.sidebar.checkbox("Направленность граф", True)
-physics = st.sidebar.checkbox("Физика", True)
+# physics = st.sidebar.checkbox("Физика", True)
 # hierarchical = st.sidebar.checkbox("Иерархический", False)
 load_file = st.sidebar.file_uploader("Загрузить файл", type=["csv"])
 load_data_button = st.sidebar.button('Загрузить данные')
