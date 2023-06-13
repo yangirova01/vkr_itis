@@ -109,6 +109,8 @@ if len(comments_df) > 0:
     #only not empty
     temp = comments_df[comments_df['bad_words'].apply(lambda x: len(x) > 0)]
     temp = temp[['text', 'bad_words']]
+    #index + 1
+    temp.index = temp.index + 1
     st.dataframe(temp.rename(columns={"text": "Текст комментария", "bad_words": "Маты"}))
 
 
