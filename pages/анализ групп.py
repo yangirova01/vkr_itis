@@ -229,7 +229,7 @@ def main():
 
             csv = convert_df(sankey_data)
             st.sidebar.download_button(
-                label="Скачать данные для графа - испоользуйте их в вкладке graph dynamic - это входные данные для графа - data.csv",
+                label="Скачать данные для графа - используйте их в вкладке graph dynamic - это входные данные для графа - data.csv",
                 data=csv,
                 file_name='data.csv',
                 mime='text/csv',
