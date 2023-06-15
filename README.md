@@ -1,1 +1,1 @@
-# VKR 11-906 VK Pars
+# VKR VK Pars
